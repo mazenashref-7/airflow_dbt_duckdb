@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_accounts
+
+    columns:
+      - name: account_key
+        tests:
+          - not_null
+          - unique
+  - name: dim_products
+    columns:
+      - name: product_key
+        tests:
+          - not_null
+          - unique
+     
+  - name: fact_sales_pipeline
+    columns:
+      - name: product_key
+        tests:
+          - not_null
+
+      - name: sales_agent_key
+        tests:
+          - not_null
+
+      # - name: account_key
+      #   tests:
+      #     - not_null
+
+  - name: dim_sales_teams
+    columns:
+      - name: sales_agent_key
+        tests:
+          - not_null
+          - unique
+
+      

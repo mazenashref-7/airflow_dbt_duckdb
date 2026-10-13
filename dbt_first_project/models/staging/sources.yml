@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: ods
+    schema: ods
+    tables:
+      - name: raw_accounts
+      - name: raw_products
+      - name: raw_sales_pipeline
+      - name: raw_sales_teams
+      - name: raw_data_dictionary
